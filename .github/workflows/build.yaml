@@ -21,6 +21,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ vars.GHCR_REGISTRY }}/${{ vars.IMAGE_NAME }}:${{ github.sha }}
+          tags: ${{ vars.GHCR_REGISTRY }}/${{ vars.IMAGE_NAME }}:${{ github.sha }},${{ vars.GHCR_REGISTRY }}/${{ vars.IMAGE_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
